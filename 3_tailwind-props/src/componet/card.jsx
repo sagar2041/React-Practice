@@ -1,14 +1,27 @@
-<div class="max-w-sm rounded overflow-hidden shadow-lg ">
-  <img className="w-full" src="https://images.unsplash.com/photo-1448387473223-5c37445527e7?dpr=2&h=220&w=440&auto=format&fit=crop&q=60" alt="Sunset in the mountains" />
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p className="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+import React from 'react'
+
+function Card({userName,btnText}) {
+  return (
+    <div className="relative h-[400px] w-[300px] rounded-md">
+  <img
+    src="https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXJ8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60"
+    alt="AirMax Pro"
+    className="z-0 h-full w-full rounded-md object-cover"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+  <div className="absolute bottom-4 left-4 text-left">
+    <h1 className="text-lg font-semibold text-white">{userName}</h1>
+    <p className="mt-2 text-sm text-gray-300">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+      debitis?
     </p>
-  </div>
-  <div className="px-6 pt-4 pb-2">
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+    <button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
+      {btnText}
+    </button>
   </div>
 </div>
+
+  )
+}
+
+export default Card
