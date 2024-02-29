@@ -10,6 +10,7 @@ function App() {
   let addValue = () =>{
     if(count < 20){
       setCount(count + 1)
+      setCount(prevcount => prevcount + 1)
     }
     
   }
